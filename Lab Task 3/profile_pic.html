@@ -1,0 +1,22 @@
+<fieldset>
+      <legend><b>PROFILE PICTURE</b></legend>
+<form id="frm-image-upload" action="index.php" name='img' method="post"
+    enctype="multipart/form-data">
+    <div class="form-row">
+        <div>Choose Image file:</div>
+        <div>
+            <input type="file" class="file-input" name="file-input">
+        </div>
+    </div>
+
+    <div class="button-row">
+        <input type="submit" id="btn-submit" name="submit"
+            value="Submit">
+    </div>
+</form>
+<?php if(!empty($response)) { ?>
+<div class="response <?php echo $response["type"]; ?>
+    
+    <?php echo $response["message"]; ?>
+</div>
+<?php }?>
